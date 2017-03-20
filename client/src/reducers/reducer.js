@@ -5,13 +5,9 @@ import {
 } from '../actions/action';
 
 const initialState = {
-  title: "df",
-  url: "",
-  location: "",
-  price: "",
-  description: "",
-  accomodates: 0,
-  loading: false
+
+  loading: false,
+  login: true
 };
 
 export default (state = initialState, action) => {

@@ -1,4 +1,8 @@
 * { box-sizing: border-box; }
+
+.hidden {
+  visibility: hidden;
+}
 .video-background {
   background: #000;
   position: fixed;
@@ -39,7 +43,7 @@
 .title, .motto {
   margin: 0px;
   padding: 0px;
-  
+
 }
 
 
