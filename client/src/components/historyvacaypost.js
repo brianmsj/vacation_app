@@ -36,7 +36,7 @@ constructor(props) {
 	            	//3.update reducer ---and im 90%  sure this functionality will work
 	            }}>
 		            <input name="country" type="text" placeholder="Enter Country"  className=""></input>
-		            <input name="city" type="text" placeholder="Entery City"  className=""></input>
+		            <input name="city" type="text" placeholder="Enter City"  className=""></input>
 		            <input name="description" type="text" placeholder="Vacation Description"  className=""></input>
 		            <input name="videoUrl" type="url" placeholder="YouTube URL"  className=""></input>
 		            <input name="soundUrl" type="url" placeholder="SoundCloud URL"  className=""></input>
