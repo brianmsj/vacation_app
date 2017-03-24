@@ -40,8 +40,8 @@ constructor(props) {
 		            <input name="description" type="text" placeholder="Vacation Description"  className=""></input>
 		            <input name="videoUrl" type="url" placeholder="YouTube URL"  className=""></input>
 		            <input name="soundUrl" type="url" placeholder="SoundCloud URL"  className=""></input>
-		            <button type="submit" className="vacation-link">Add Vacay</button>
-                <button type="submit" className="vacation-link">Go Back</button>
+		            <button type="submit" className="form-button">Add Vacay</button>
+                <button type="submit" className="form-button">Go Back</button>
 	              </form>
               </div>
        	);

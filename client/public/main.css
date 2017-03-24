@@ -373,7 +373,7 @@ text-align: center;
   user-select:none;
   text-decoration:none;
 }
-.logout-sidebar,.add-new-sidebar,.home-sidebar,.home-guest{
+.logout-sidebar,.add-new-sidebar,.home-sidebar,.home-guest,.form-button{
   font-family:"Roboto", Roboto, arial, sans-serif;
   font-size: 1em;
   padding: 10px 15px;
@@ -466,16 +466,20 @@ text-align: center;
   font-size: 1.25em;
 
 }
-
+.form-button {
+  padding-left: 10px;
+  margin-left: 10px;
+}
 .form-style-6{
     font-family: 'Raleway', sans-serif;
+    color: white;
     max-width: 500px;
     padding: 16px;
     position: absolute;
     left: 30%;
-    top: 15%;
-    background: #F7F7F7;
+    top: 4%;
     border-radius:3%;
+    background: linear-gradient(to top, #F7F7F7 76%, white 30%, #4479BA 30%);
 }
 .form-style-6.form-head{
     background: #43D1AF;
