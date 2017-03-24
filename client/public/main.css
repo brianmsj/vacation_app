@@ -207,6 +207,7 @@ input, select, textarea{
 }
 .inline1 {
   display: inline-block;
+  padding-left: 10px;
 }
 .logged-in-as {
   font-size: 1em;
