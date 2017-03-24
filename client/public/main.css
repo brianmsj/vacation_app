@@ -185,11 +185,16 @@ input, select, textarea{
   padding-left: 15px;
 }
 
-
+.log-in-container{
+  padding-bottom: 10px;
+}
 .nav-bar {
   display: inline-block;
   float: right;
 
+}
+.nav-button{
+  padding-right: 20px;
 }
 .profile-pic {
   height: 50px;
@@ -198,6 +203,9 @@ input, select, textarea{
   vertical-align: middle;
 
 
+}
+.goog-img,.logged-in-name{
+  display: inline-block;
 }
 .vacation-profile-pic {
   height: 80px;
