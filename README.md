@@ -28,26 +28,23 @@ Then open [`localhost:8000`](http://localhost:8000) in a browser.
 Note on compatibility: The API relies on NodeJS v6.3.1.  All other dependencies are listed in the _package.json_ file. Although the API might run on alternative versions, it has not been tested.
 
 ## About
-Today, Americans and people around the world. In fact, a recent study from <a href="http://news.harvard.edu/gazette/story/2011/01/eight-weeks-to-a-better-brain/">Harvard</a> showed that meditation can lead to changes in brain structure that provide cognitive and psychological benefits. Breathe is an experimental application that seamlessly combines API data from YouTube and SoundCloud to help the user find peace of mind by presenting relaxing imagery and sounds in full-screen format.
+Today, Americans and people around the world are working more hours for less pay. People in 2017 are taking about 30% less vacation time than people did back in 1980. In fact, a recent articles from <a href=http://www.npr.org/sections/health-shots/2016/07/12/485606970/overworked-americans-arent-taking-the-vacation-theyve-earned>NPR</a> said less vacation is equalling less happiness overall in peoples lives. In the past, workers have used a variety of techniques to escape the day such as medidation or yoga. But, what if you do not have enough time during your busy day for one of these techniques? Wouldn't you want to take an instant vacation right on your computer monitor while in the office? With Virtual Vacay now you can take a variety of quick, easy, instant virtual vacations and be back for the 2PM Ops meeting in no time.
 
 ## How it Works
-Users are able to choose between 4 different scenes, each with its own accompanying audio. Although the video is embedded from YouTube and the audio is embedded from SoundCloud, the files were handpicked and carefully edited to provide the user with a seamless experience.
-<img src="./images/breathe_wireframe.JPG">
-After 5 second of inactivity, all components (including the mouse but excluding the video) will fade out to really help immerse the user in the currently selected scene.
+Users are requested to login. You are able to login as a guest or using a simple google sign in which will take some small bits of data from google such as name and e-mail. Once logged in, you will be prompted to enter a search for a country or location of your choosing. You will then be taken to the location of your choice via Video and hear sounds of that location with our embedded SoundCloud feature. Although the video is embedded from YouTube and the audio is embedded from SoundCloud, the files were handpicked and carefully edited to provide the user with a seamless experience. If you are unable to find a particular video or song in our database, feel free to click on the "All Vacations" button at the top left of the screen. From there, you will link to a page that list all of the vacations in our database. On the left navigation bar, you will see a button where you can add your own personal vacation using easy to embed YouTube and SoundCloud links.
 
 ### Caveat
-Due to the experimental design of the application and the inability of mobile devices to autoload video and audio media, an image that kindly requests the user to view the application on a larger viewport has been implemented below a width of 600px.
+Due to the experimental design of the application and the inability of mobile devices to autoload video and audio media, we recommend you view this technology on a larger viewport with a fast connection that can fully immerse you in the virtual vacation experience.
 
 ## Technology
 * HTML5
 * CSS3
 * JavaScript
-* jQuery
 * React
 * Redux
 * React-Router
 * <a href="https://mochajs.org/">Mocha</a> + <a href="http://chaijs.com/">Chai</a> (testing)
-* Continuous integration and deployment with <a href="https://travis-ci.org/">Travis CI</a>
+
 
 ### API
 * YouTube
