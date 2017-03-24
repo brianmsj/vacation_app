@@ -29,20 +29,6 @@ passport.use(new BearerStrategy(
   }
 ));
 
-
-
-
-
-app.get('/api/houses', (req, res) => {
-  Houses
-  .find()
-  .exec()
-  .then(data => res.json(data)
-  .catch(console.error)
-)}
-);
-
-
 app.get('/api/user', (req, res) => {
   User
   .find()
@@ -76,7 +62,6 @@ app.post('/api/user', jsonParser, (req, res) => {
 });
 
 
-// ONLY ADDING THIS SO WE TEST ADDING AND REMOVING USERS
 app.delete('/api/user/:id', (req , res) =>{
   User
   .findByIdAndRemove(req.params.id)
@@ -84,10 +69,6 @@ app.delete('/api/user/:id', (req , res) =>{
   .then(post => res.status(204).end())
   .catch(err => {console.error(err); res.status(500).json({message: 'Internal server error'})});
 });
-
-
-
-
 
 //==============Vacation endpoints==============================
 
@@ -108,10 +89,6 @@ app.get('/api/vacation/:country', (req, res) => {
   .then(data => res.json(data))
   .catch(console.error)
 });
-
-//
-
-
 
 
 app.post('/api/vacation', jsonParser, (req, res) => {
@@ -134,39 +111,6 @@ app.post('/api/vacation', jsonParser, (req, res) => {
   })
 
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // Serve the built client
 app.use(express.static(path.resolve(__dirname, '../client/build')));
