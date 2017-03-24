@@ -54,7 +54,7 @@ export const exposePostForm = () => ({
 export const postUserData = (name,id,profilePicURL,accessToken,expiresAt,email) => {
 
   return (dispatch) => {
-    fetch('http://localhost:8080/api/user', {
+    fetch('/api/user', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -72,7 +72,7 @@ export const postUserData = (name,id,profilePicURL,accessToken,expiresAt,email) 
 
 export const fetchvacations = () => dispatch => {
     console.log("fetching vacation data...");
-    fetch('http://localhost:8080/api/vacation')
+    fetch('/api/vacation')
     .then(response => response.json())
     .then(json => {
       console.log(json[0].country)//look at the console before dispatching the action.
@@ -83,7 +83,7 @@ export const fetchvacations = () => dispatch => {
 
 export const searchRequest = (data) => dispatch => {
     console.log("fetching search data...");
-    fetch(`http://localhost:8080/api/vacation/${data}`)
+    fetch(`/api/vacation/${data}`)
     .then(response => response.json())
     .then(json => dispatch(searchData(json[0].country,json[0].description,json[0].videoUrl,json[0].soundUrl)))
 }
@@ -105,7 +105,7 @@ export const vacayhistory = (vdata) => ({
 export const fetchinghistory = (accessToken) => (dispatch, getState) => {
     const state = getState();
     console.log("fetching vacation history");
-    fetch('http://localhost:8080/api/vacation', {
+    fetch('/api/vacation', {
       headers:{
         authorization: `bearer ${state.accessToken}`
       }
@@ -138,7 +138,7 @@ export const addingVacayObjToHistory = (vacayObj) => ({
 export const postVacationData = (country,city,description,videoUrl,soundUrl) => {
 
   return (dispatch) => {
-    fetch('http://localhost:8080/api/vacation', {
+    fetch('/api/vacation', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
