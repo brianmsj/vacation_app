@@ -15,7 +15,7 @@ import {
    $(function () {
      let timer;
 
-     $(document).mouseleave(function () {
+     $(document).mousemove(function () {
        if (timer) {
          clearTimeout(timer);
          timer = 0;
