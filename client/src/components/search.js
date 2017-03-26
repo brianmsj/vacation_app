@@ -15,7 +15,7 @@ import {
    $(function () {
      let timer;
 
-     $(document).mousemove(function () {
+     $(document).mouseleave(function () {
        if (timer) {
          clearTimeout(timer);
          timer = 0;
@@ -24,7 +24,7 @@ import {
 
        timer = setTimeout(function () {
          $('.search-box').fadeOut()
-       }, 4000)
+       }, 3000)
      });
    });
  }
