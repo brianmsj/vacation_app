@@ -42,6 +42,7 @@ Due to the experimental design of the application and the inability of mobile de
 * JavaScript
 * React
 * Redux
+* jQuery
 * React-Router
 * <a href="https://mochajs.org/">Mocha</a> + <a href="http://chaijs.com/">Chai</a> (testing)
 
