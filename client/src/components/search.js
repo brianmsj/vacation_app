@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import $ from 'jquery';
 
 import {
     searchRequest,
@@ -9,6 +10,24 @@ import {
 
 
  class Search extends React.Component {
+
+   componentDidMount() {
+   $(function () {
+     let timer;
+
+     $(document).mousemove(function () {
+       if (timer) {
+         clearTimeout(timer);
+         timer = 0;
+         $('.search-box').fadeIn();
+       }
+
+       timer = setTimeout(function () {
+         $('.search-box').fadeOut()
+       }, 4000)
+     });
+   });
+ }
 
 
     render() {
