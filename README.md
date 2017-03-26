@@ -1,10 +1,10 @@
-# Virtual Vacay Vacation App
+# Virtual Vacay 
 
-An App that allows you take a virtual vacation wherever you are.
+An App that allows you take a <a href='https://calm-shore-18628.herokuapp.com/'>virtual vacation</a> wherever you are.
 
 ## Overview
 
-The Virtual Vacation App will allow the user to search for a location of their choosing and view a high definition
+<a href='https://calm-shore-18628.herokuapp.com/'>Virtual Vacay</a> will allow the user to search for a location of their choosing and view a high definition
 video along with a Soundcloud embedded track. The user also has the option to add their own vacation with a YouTube 
 video of their choice and a SoundCloud embedded track. 
 
