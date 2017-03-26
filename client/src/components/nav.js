@@ -2,6 +2,8 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {logoutSuccess} from '../actions/action';
 import {Link} from 'react-router';
+import $ from 'jquery';
+
 
 
 
@@ -12,7 +14,23 @@ import {Link} from 'react-router';
          this.renderInitialState = this.renderInitialState.bind(this)
 }
 
+      componentDidMount() {
+      $(function () {
+        let timer;
 
+        $(document).mousemove(function () {
+          if (timer) {
+            clearTimeout(timer);
+            timer = 0;
+            $('.nav-bar').fadeIn();
+          }
+
+          timer = setTimeout(function () {
+            $('.nav-bar').fadeOut()
+          }, 3000)
+        });
+      });
+      }
 
    renderInitialState() {
      this.props.dispatch(logoutSuccess())
