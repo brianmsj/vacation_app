@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {logoutSuccess} from '../actions/action';
+import {logoutSuccess,soundCloudIcon} from '../actions/action';
 import {Link} from 'react-router';
 import $ from 'jquery';
 
@@ -22,7 +22,7 @@ import $ from 'jquery';
           if (timer) {
             clearTimeout(timer);
             timer = 0;
-            $('.nav-bar').fadeIn();
+           $('.nav-bar').fadeIn();
           }
 
           timer = setTimeout(function () {
@@ -34,6 +34,8 @@ import $ from 'jquery';
 
    renderInitialState() {
      this.props.dispatch(logoutSuccess())
+     this.props.dispatch(soundCloudIcon())
+
    }
 
     render() {
@@ -60,6 +62,8 @@ import $ from 'jquery';
 
 const mapStateToProps = (state) => ({
  profilePicURL: state.profilePicURL,
- name: state.name
+ name: state.name,
+ soundShowing: state.soundShowing
+
 });
 export default connect(mapStateToProps)(Nav)

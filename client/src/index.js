@@ -8,7 +8,7 @@ import {Router, Route, hashHistory} from 'react-router';
 import store from './store';
 import App from './components/app';
 import HistoryHome from './components/historyhome';
-import Logout from './components/logout';
+
 
 document.addEventListener('DOMContentLoaded', () =>
     ReactDOM.render(
@@ -16,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () =>
         	<Router history={hashHistory}>
         		<Route path="/" component={App} />
         		<Route path="/Vacations" component={HistoryHome} />
-            <Route path="/logout" component={Logout} />
             </Router>
         </Provider>,
         document.getElementById('root')
