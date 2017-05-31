@@ -42,7 +42,7 @@ import {
                        this.props.dispatch(soundCloudIcon());
 
                   }} className="search-form" >
-                    <input name="searchfield" type="text" placeholder="Enter Country Here"  className="search-bar" required></input>
+                    <input name="searchfield" type="text" placeholder="i.e France, Australia"  className="search-bar" required></input>
                     <button type="submit" className="vacation-link">Search</button>
                   </form>
                 </div>
