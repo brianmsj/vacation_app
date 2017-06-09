@@ -10,7 +10,7 @@ import {postUserData,loginUserPage,soundCloudIconOff} from '../actions/action';
         super(props);
 
         this.handleSocialLogin=this.handleSocialLogin.bind(this);
-        this.continueAsGuestClicked=this.continueAsGuestClicked.bind(this);
+        this.handleGuestLogin=this.handleGuestLogin.bind(this);
     }
 
  handleSocialLogin (user,err)  {
@@ -56,6 +56,10 @@ import {postUserData,loginUserPage,soundCloudIconOff} from '../actions/action';
                       callback={this.handleGuestLogin} >
                     <button type="submit" className="home-guest">Continue as Guest </button>
                   </SocialLogin>
+                  <div className='guest-info'>
+                  <p className='guest-username'>Guest UserName: virtualvacaydemo</p>
+                  <p className='guest-password'>Guest Password: virtualvacay</p>
+                  </div>
                 </div>
 
         );
