@@ -13,7 +13,8 @@ import {
   NO_SEARCH_DATA,
   NO_SEARCH_DATA_CORRECT,
   SOUND_CLOUD_ICON_OFF,
-  RESET_STATE
+  RESET_STATE,
+  SHOW_VACATIONS_MODAL
 
 } from '../actions/action';
 
@@ -39,7 +40,8 @@ const initialState = {
   history:[],
   cardShowing: true,
   postShowing: false,
-  noSearchData: false
+  noSearchData: false,
+  vacationsModal: false
 };
 
 export default (state = initialState, action) => {
@@ -110,6 +112,10 @@ export default (state = initialState, action) => {
            case NO_SEARCH_DATA:
            return Object.assign({},state,{
              noSearchData: true
+           })
+           case SHOW_VACATIONS_MODAL:
+           return Object.assign({},state,{
+             vacationsModal: true
            })
            case NO_SEARCH_DATA_CORRECT:
            return Object.assign({},state,{

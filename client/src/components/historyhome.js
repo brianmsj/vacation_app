@@ -1,6 +1,5 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import HistoryResults from './historyresults';
 import HistorySideBar from './historysidebar';
 import PostingANewVacay from './historyvacaypost';
 
@@ -10,10 +9,7 @@ import PostingANewVacay from './historyvacaypost';
 
 
    render() {
-     let cardPage;
-     if (this.props.postShowing === false) {
-       cardPage=<HistoryResults/>;
-     }
+
      let postPage;
      if (this.props.cardShowing === false) {
        postPage=<PostingANewVacay/>
@@ -22,7 +18,6 @@ import PostingANewVacay from './historyvacaypost';
      return (
        <div className="mainPageVacations" >
        <HistorySideBar/>
-       {cardPage}
        {postPage}
        </div>
      );

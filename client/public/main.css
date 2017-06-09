@@ -268,32 +268,31 @@ input, select, textarea{
   right: 10px;
 }
 
-/* OVERNIGHT templete--UPDATE LATER*/
-/* EVERYTHING BELOW IS A COPY AND PASTE FOR THE NYT APP---- TRYING TO MAKE THE VACATIONS DATA LOOK RESPONSIVE*/
-
-
-
 .article-div{
   margin-bottom: 10px;
-  width: 100%;
+  width: 70%;
+  color: white;
   font-family: 'Sahitya', serif;
   border-radius: 18px;
   border: 1px solid #A9837E;
   padding: 0px;
   text-indent: 2em;
   padding-top: 30px;
-  background: linear-gradient(to top, white 76%, white 30%, #4479BA 30%);
+  background: black;
 }
 
 .container div .inner{
   border: 1px solid darkgrey;
   padding: 0px 10px;
-  background-color: #EDEDED;
-  width: 100%;
+  background-color: black;
+  width:100%;
   border-radius: 5px;
   padding-top: 10px;
 }
-
+.country-heading-card {
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
 
 /*This styling below applies only to screens with more than 683px:*/
 @media screen and (min-width: 683px) {
@@ -555,4 +554,15 @@ text-align: center;
 }
 .guest-username {
   margin-bottom: 5px;
+}
+.all-vacations {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  overflow: scroll;
+  background-color: black;
+  opacity: 0.7;
+  max-height: 500px;
+  max-width: 70%;
+  margin: auto;
 }

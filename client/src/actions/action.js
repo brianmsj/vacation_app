@@ -38,6 +38,11 @@ export const noSearchData = () => ({
   type: NO_SEARCH_DATA,
 
 })
+export const SHOW_VACATIONS_MODAL = 'SHOW_VACATIONS_MODAL';
+export const showVacationsModal = () => ({
+  type: SHOW_VACATIONS_MODAL,
+
+})
 export const NO_SEARCH_DATA_CORRECT = 'NO_SEARCH_DATA_CORRECT';
 export const noSearchDataCorrect = () => ({
   type: NO_SEARCH_DATA_CORRECT,

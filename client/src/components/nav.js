@@ -1,8 +1,9 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {logoutSuccess,soundCloudIcon, soundCloudIconOff,resetState} from '../actions/action';
+import {logoutSuccess,soundCloudIcon, soundCloudIconOff,resetState,fetchinghistory,showVacationsModal} from '../actions/action';
 import {Link} from 'react-router';
 import $ from 'jquery';
+import Search from './search'
 
 
 
@@ -12,29 +13,35 @@ import $ from 'jquery';
      constructor(props) {
          super(props);
          this.renderInitialState = this.renderInitialState.bind(this)
+         this.fetchHistory = this.fetchHistory.bind(this)
 }
 
       componentDidMount() {
-      $(function () {
-        let timer;
-
-        $(document).mousemove(function () {
-          if (timer) {
-            clearTimeout(timer);
-            timer = 0;
-           $('.nav-bar').fadeIn();
-          }
-
-          timer = setTimeout(function () {
-            $('.nav-bar').fadeOut()
-          }, 10000)
-        });
-      });
+      // $(function () {
+      //   let timer;
+      //
+      //   $(document).mousemove(function () {
+      //     if (timer) {
+      //       clearTimeout(timer);
+      //       timer = 0;
+      //      $('.nav-bar').fadeIn();
+      //     }
+      //
+      //     timer = setTimeout(function () {
+      //       $('.nav-bar').fadeOut()
+      //     }, 10000)
+      //   });
+      // });
       }
 
    renderInitialState() {
      this.props.dispatch(logoutSuccess())
      this.props.dispatch(resetState())
+
+   }
+   fetchHistory() {
+    this.props.dispatch(fetchinghistory(this.props.accessToken))
+    this.props.dispatch(showVacationsModal())
 
    }
 
@@ -49,7 +56,7 @@ import $ from 'jquery';
                  </div>
                  <div className='nav-button'>
                     <div className='inline1'>
-                     <Link to={'/Vacations'} className='vacation-link'>All Vacations</Link>
+                     <button className='vacation-link' onClick={this.fetchHistory}>All Vacations</button>
                     </div>
                     <div className='inline1'>
                      <button type="submit" onClick={this.renderInitialState} className='vacation-link'>Logout</button>
@@ -63,7 +70,10 @@ import $ from 'jquery';
 const mapStateToProps = (state) => ({
  profilePicURL: state.profilePicURL,
  name: state.name,
- soundShowing: state.soundShowing
+ soundShowing: state.soundShowing,
+ history: state.history,
+ accessToken: state.accessToken,
+ vacationsModal: state.vacationsModal
 
 });
 export default connect(mapStateToProps)(Nav)

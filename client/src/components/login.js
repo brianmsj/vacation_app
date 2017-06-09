@@ -44,7 +44,7 @@ import {postUserData,loginUserPage,soundCloudIconOff} from '../actions/action';
                 <div className="loginDiv" >
                  <SocialLogin
                      provider="google"
-                      appId="1062078359952-7lgm593jaq7m620vm4c15i7d6gdgeqqn.apps.googleusercontent.com"
+                     appId="1062078359952-7lgm593jaq7m620vm4c15i7d6gdgeqqn.apps.googleusercontent.com"
                      callback={this.handleSocialLogin} >
                      <button className="loginBtn loginBtn--google">SignIn Using Google</button>
                   </SocialLogin>
@@ -52,7 +52,7 @@ import {postUserData,loginUserPage,soundCloudIconOff} from '../actions/action';
                   <p className="or">Or</p>
                   <SocialLogin
                       provider="google"
-                       appId="1062078359952-7lgm593jaq7m620vm4c15i7d6gdgeqqn.apps.googleusercontent.com"
+                      appId="1062078359952-7lgm593jaq7m620vm4c15i7d6gdgeqqn.apps.googleusercontent.com"
                       callback={this.handleGuestLogin} >
                     <button type="submit" className="home-guest">Continue as Guest </button>
                   </SocialLogin>

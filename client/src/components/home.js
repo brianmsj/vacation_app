@@ -5,6 +5,7 @@ import Nav from './nav';
 import Search from './search';
 import Headings from './headings';
 import Sound from './sound';
+import AllVacations from './allvacations'
 import {connect} from 'react-redux';
 import {
 
@@ -13,7 +14,7 @@ import {
 
 
  class Home extends React.Component {
-  
+
     // constructor(props) {
     //     super(props);
 
@@ -26,11 +27,12 @@ import {
         loginPage=<Login/>;
       }
       let searchPage;
-      if (this.props.loggedIn === true ) {
+      if (this.props.loggedIn === true && this.props.vacationsModal === false) {
         searchPage=<Search/>;
       }
       let navPage;
-      if (this.props.loggedIn === true && this.props.userType !== "guest") {
+      if (this.props.loggedIn === true && this.props.userType !== "guest"
+          && this.props.vacationsModal === false) {
         navPage=<Nav/>
       }
       let headings;
@@ -40,6 +42,10 @@ import {
       let sound;
       if (this.props.soundShowing === true ) {
         sound=<Sound/>
+      }
+      let vacationsModal;
+      if(this.props.vacationsModal === true) {
+        vacationsModal=<AllVacations />
       }
 
       return (
@@ -54,6 +60,9 @@ import {
           </div>
           {loginPage}
           {searchPage}
+        <div className='vacations-modal'>
+          {vacationsModal}
+        </div>
         <footer>
          {sound}
         </footer>
@@ -69,7 +78,8 @@ const mapStateToProps = (state) => ({
  videoUrl: state.videoUrl,
  soundUrl: state.soundUrl,
  soundShowing: state.soundShowing,
- userType:state.loggedInUserType
+ userType:state.loggedInUserType,
+ vacationsModal: state.vacationsModal
 });
 
 
