@@ -40,7 +40,7 @@ import {postUserData,loginUserPage,soundCloudIconOff} from '../actions/action';
                 <div className="loginDiv" >
                  <SocialLogin
                      provider="google"
-                      appId="1062078359952-58ehqcdvcueujv0k0qdbku98ifk0v11c.apps.googleusercontent.com"
+                      appId="1062078359952-7lgm593jaq7m620vm4c15i7d6gdgeqqn.apps.googleusercontent.com"
                      callback={this.handleSocialLogin} >
                      <button className="loginBtn loginBtn--google">SignIn Using Google</button>
                   </SocialLogin>
