@@ -35,6 +35,7 @@ import {searchRequest, soundCloudIcon, noSearchData} from '../actions/action';
       }
               return (
                 <div className='search-box' >
+                <div className='search-box-container'>
                   <h2 className='motto'>{`${this.props.hi} `}{this.props.name}, {this.props.whereMessage}</h2>
                   <form onSubmit={(event) => {
                       event.preventDefault();
@@ -45,6 +46,7 @@ import {searchRequest, soundCloudIcon, noSearchData} from '../actions/action';
                     <button type='submit' className='vacation-link'>Search</button>
                   </form>
                   {noSearchData}
+                </div>
                 </div>
         );
     }

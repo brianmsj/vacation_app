@@ -30,10 +30,6 @@ constructor(props) {
 	            	console.log(country,city,description,videoUrl,soundUrl);
 	            	this.props.dispatch(postVacationData(country,city,description,videoUrl,soundUrl));
 
-	            	// all you have to do now is create a
-	            	//1. async action
-	            	//2. syn action
-	            	//3.update reducer ---and im 90%  sure this functionality will work
 	            }}>
 		            <input name="country" type="text" placeholder="Enter Country"  className=""></input>
 		            <input name="city" type="text" placeholder="Enter City"  className=""></input>
