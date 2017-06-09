@@ -1,7 +1,7 @@
 import React from 'react';
 import SocialLogin from 'react-social-login';
 import {connect} from 'react-redux';
-import {postUserData,loginUserPage} from '../actions/action';
+import {postUserData,loginUserPage,soundCloudIconOff} from '../actions/action';
 
 
 

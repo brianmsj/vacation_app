@@ -12,7 +12,8 @@ import {
   LOGOUT_SUCCESS,
   NO_SEARCH_DATA,
   NO_SEARCH_DATA_CORRECT,
-  SOUND_CLOUD_ICON_OFF
+  SOUND_CLOUD_ICON_OFF,
+  RESET_STATE
 
 } from '../actions/action';
 
@@ -114,6 +115,9 @@ export default (state = initialState, action) => {
            return Object.assign({},state,{
              noSearchData: false
            })
+           case RESET_STATE:
+           return initialState
+
 
 
       default:

@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {logoutSuccess,soundCloudIcon} from '../actions/action';
+import {logoutSuccess,soundCloudIcon, soundCloudIconOff,resetState} from '../actions/action';
 import {Link} from 'react-router';
 import $ from 'jquery';
 
@@ -34,7 +34,7 @@ import $ from 'jquery';
 
    renderInitialState() {
      this.props.dispatch(logoutSuccess())
-     this.props.dispatch(soundCloudIcon())
+     this.props.dispatch(resetState())
 
    }
 

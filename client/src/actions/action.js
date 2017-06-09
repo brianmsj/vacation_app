@@ -47,6 +47,10 @@ export const SOUND_CLOUD_ICON = 'SOUND_CLOUD_ICON';
 export const soundCloudIcon = () => ({
   type: SOUND_CLOUD_ICON,
 })
+export const RESET_STATE = 'RESET_STATE';
+export const resetState = () => ({
+  type: RESET_STATE
+})
 
 export const POST_VACATION_FORM = 'POST_VACATION_FORM';
 export const postVacationForm = () => ({
