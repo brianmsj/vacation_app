@@ -43,6 +43,13 @@ import {searchRequest, soundCloudIcon, noSearchData} from '../actions/action';
                       }}className='search-form' >
                     <input name='searchfield' type='text' placeholder='Enter Country Here'  className='search-bar WelcomeBtn' required></input>
                     <button type='submit' className='vacation-link'>Search</button>
+                      console.log(userInput);
+                       this.props.dispatch(searchRequest(userInput));
+                       this.props.dispatch(soundCloudIcon());
+
+                  }} className="search-form" >
+                    <input name="searchfield" type="text" placeholder="i.e France, Australia"  className="search-bar" required></input>
+                    <button type="submit" className="vacation-link">Search</button>
                   </form>
                   {noSearchData}
                 </div>
