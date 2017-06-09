@@ -14,8 +14,6 @@ import {postUserData,loginUserPage,soundCloudIconOff} from '../actions/action';
     }
 
  handleSocialLogin (user,err)  {
-   console.log(user); //either you will get a user
-   console.log(err); //or an error
    const id = user._profile.id;
    const name= user._profile.name;
    const email= user._profile.email;
@@ -27,11 +25,17 @@ import {postUserData,loginUserPage,soundCloudIconOff} from '../actions/action';
    this.props.dispatch(loginUserPage("google"))
  }
 
-  continueAsGuestClicked() {
-    this.props.dispatch(loginUserPage('guest'))
-    // dispatch an action that takes out the nav bar for guest users
+ handleGuestLogin (user,err)  {
+   const id = "112129208462029037899";
+   const name= "Demo Account";
+   const email= "virtualvacaydemo@gmail.com";
+   const profilePicURL= 'https://lh4.googleusercontent.com/-69jna7hMnn8/AAAAAAAAAAI/AAAAAAAAAAA/AAyYBF5Bs2iDGvlLG_L73SEKIY9ooQmjrA/s96-c/photo.jpg';
+   const accessToken= 'ya29.GltkBMTsvFZh7K5Ny6KwYyOyC_QbKx72-WXf0Rodyb4vKSgt9rYPx-ei0OWvVjF9fOww83nCHNtnvHm4ZeXNkGbdX8vTUFYi2RhmEU0mMjSSf7Ny_dAgn7RKU8JN';
+   const expiresAt= '1496987933712';
 
-  }
+   this.props.dispatch(postUserData(name,id,profilePicURL,accessToken,expiresAt,email))
+   this.props.dispatch(loginUserPage("google"))
+ }
 
     render() {
 
@@ -46,9 +50,12 @@ import {postUserData,loginUserPage,soundCloudIconOff} from '../actions/action';
                   </SocialLogin>
 
                   <p className="or">Or</p>
-                  <form className="main-input" onSubmit={this.continueAsGuestClicked} >
+                  <SocialLogin
+                      provider="google"
+                       appId="1062078359952-7lgm593jaq7m620vm4c15i7d6gdgeqqn.apps.googleusercontent.com"
+                      callback={this.handleGuestLogin} >
                     <button type="submit" className="home-guest">Continue as Guest </button>
-                  </form>
+                  </SocialLogin>
                 </div>
 
         );
