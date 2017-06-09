@@ -25,17 +25,18 @@ passport.use(new BearerStrategy(
       if (!user) { return done(null, false); }
       return done(null, user, { scope: 'all' });
     });
-
   }
 ));
 
+
+
 app.get('/api/user', (req, res) => {
   User
-  .find()
-  .exec()
-  .then(data => res.json(data)
-  .catch(console.error)
-)}
+    .find()
+    .exec()
+    .then(data => res.json(data)
+    .catch(console.error)
+  )}
 );
 
 //creates a new user in the user collection
@@ -86,7 +87,14 @@ app.get('/api/vacation/:country', (req, res) => {
   Vacation
   .find({country:re})
   .exec()
-  .then(data => res.json(data))
+  .then(data => {
+    if(data.length === 1) {
+      res.json(data)
+    }
+    else {
+      console.log('country does not exist')
+      res.json("country does not exist")}
+    })
   .catch(console.error)
 });
 

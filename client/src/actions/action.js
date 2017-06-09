@@ -33,6 +33,16 @@ export const searchData = (country, description, videoUrl, soundUrl) => ({
   videoUrl,
   soundUrl
 })
+export const NO_SEARCH_DATA = 'NO_SEARCH_DATA';
+export const noSearchData = () => ({
+  type: NO_SEARCH_DATA,
+
+})
+export const NO_SEARCH_DATA_CORRECT = 'NO_SEARCH_DATA_CORRECT';
+export const noSearchDataCorrect = () => ({
+  type: NO_SEARCH_DATA_CORRECT,
+})
+
 export const SOUND_CLOUD_ICON = 'SOUND_CLOUD_ICON';
 export const soundCloudIcon = () => ({
   type: SOUND_CLOUD_ICON,
@@ -45,6 +55,10 @@ export const postVacationForm = () => ({
 export const EXPOSE_POST_FORM = 'EXPOSE_POST_FORM';
 export const exposePostForm = () => ({
   type: EXPOSE_POST_FORM,
+})
+export const SOUND_CLOUD_ICON_OFF = 'SOUND_CLOUD_ICON_OFF';
+export const soundCloudIconOff = () => ({
+  type: SOUND_CLOUD_ICON_OFF,
 })
 
 
@@ -82,10 +96,16 @@ export const fetchvacations = () => dispatch => {
 }
 
 export const searchRequest = (data) => dispatch => {
-    console.log("fetching search data...");
     fetch(`/api/vacation/${data}`)
     .then(response => response.json())
-    .then(json => dispatch(searchData(json[0].country,json[0].description,json[0].videoUrl,json[0].soundUrl)))
+    .then(json => {
+      if(json === "country does not exist") {
+       dispatch(noSearchData())
+       dispatch(soundCloudIconOff())
+      }
+       dispatch(searchData(json[0].country,json[0].description,json[0].videoUrl,json[0].soundUrl))})
+       dispatch(noSearchDataCorrect())
+       dispatch(soundCloudIcon())
 }
 
 

@@ -40,7 +40,7 @@ import {postUserData,loginUserPage} from '../actions/action';
                 <div className="loginDiv" >
                  <SocialLogin
                      provider="google"
-                      appId="1062078359952-ravuchpql8bquf0ql634ct7l8gvp3sag.apps.googleusercontent.com"
+                      appId="1062078359952-58ehqcdvcueujv0k0qdbku98ifk0v11c.apps.googleusercontent.com"
                      callback={this.handleSocialLogin} >
                      <button className="loginBtn loginBtn--google">SignIn Using Google</button>
                   </SocialLogin>

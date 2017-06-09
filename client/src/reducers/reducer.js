@@ -9,7 +9,10 @@ import {
   EXPOSE_POST_FORM,
   POST_VACATION_DATA_SUCCESS,
   ADDING_VACAY_OBJ_TO_HISTORY,
-  LOGOUT_SUCCESS
+  LOGOUT_SUCCESS,
+  NO_SEARCH_DATA,
+  NO_SEARCH_DATA_CORRECT,
+  SOUND_CLOUD_ICON_OFF
 
 } from '../actions/action';
 
@@ -35,6 +38,7 @@ const initialState = {
   history:[],
   cardShowing: true,
   postShowing: false,
+  noSearchData: false
 };
 
 export default (state = initialState, action) => {
@@ -72,6 +76,10 @@ export default (state = initialState, action) => {
           return Object.assign({},state,{
             soundShowing: true
           })
+          case SOUND_CLOUD_ICON_OFF:
+           return Object.assign({},state,{
+             soundShowing: false
+           })
           case VACAY_HISTORY:
           return Object.assign({},state,{
             history: action.vdata
@@ -97,6 +105,14 @@ export default (state = initialState, action) => {
            return Object.assign({},state,{
              loggedIn: false,
              name: ""
+           })
+           case NO_SEARCH_DATA:
+           return Object.assign({},state,{
+             noSearchData: true
+           })
+           case NO_SEARCH_DATA_CORRECT:
+           return Object.assign({},state,{
+             noSearchData: false
            })
 
 

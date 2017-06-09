@@ -28,7 +28,9 @@ body {
   height: 100%;
   pointer-events: none;
 }
-
+.WelcomeBtn:focus{
+  outline:0;
+}
 @media (min-aspect-ratio: 16/9) {
   .video-foreground { height: 300%; top: -100%; }
 }
@@ -532,4 +534,8 @@ text-align: center;
 .seat{
   position:absolute;
   margin-top:30px;
+}
+.no-search-data {
+  color: red;
+  font-size: 18px;
 }

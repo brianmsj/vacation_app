@@ -27,7 +27,7 @@ import $ from 'jquery';
 
           timer = setTimeout(function () {
             $('.nav-bar').fadeOut()
-          }, 3000)
+          }, 10000)
         });
       });
       }
