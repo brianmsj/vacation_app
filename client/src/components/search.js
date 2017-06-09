@@ -2,12 +2,14 @@ import React from 'react';
 import {connect} from 'react-redux';
 import $ from 'jquery';
 
-import {searchRequest, soundCloudIcon, noSearchData} from '../actions/action';
+import {searchRequest, soundCloudIcon, noSearchData, renderVideo} from '../actions/action';
 
 
 
  class Search extends React.Component {
-
+   constructor() {
+     super();
+   }
    componentDidMount() {
      $(function () {
        let timer;
@@ -31,6 +33,7 @@ import {searchRequest, soundCloudIcon, noSearchData} from '../actions/action';
     render() {
       let noSearchData;
       if (this.props.noSearchData === true) {
+         this.props.dispatch(renderVideo())
          noSearchData= <h5 className='no-search-data'>We will add this Country shortly, please click on All Vacations for all available countries</h5>;
       }
               return (

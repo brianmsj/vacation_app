@@ -14,7 +14,8 @@ import {
   NO_SEARCH_DATA_CORRECT,
   SOUND_CLOUD_ICON_OFF,
   RESET_STATE,
-  SHOW_VACATIONS_MODAL
+  SHOW_VACATIONS_MODAL,
+  RENDER_VIDEO
 
 } from '../actions/action';
 
@@ -90,6 +91,10 @@ export default (state = initialState, action) => {
           case POST_VACATION_FORM:
            return Object.assign({},state,{
             cardShowing: false
+           })
+          case RENDER_VIDEO:
+           return Object.assign({},state,{
+            videoUrl: 'https://www.youtube.com/embed/HFIEwpbOWak'
            })
           case EXPOSE_POST_FORM:
            return Object.assign({},state,{

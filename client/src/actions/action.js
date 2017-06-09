@@ -43,6 +43,11 @@ export const showVacationsModal = () => ({
   type: SHOW_VACATIONS_MODAL,
 
 })
+export const RENDER_VIDEO = 'RENDER_VIDEO';
+export const renderVideo = () => ({
+  type: RENDER_VIDEO,
+
+})
 export const NO_SEARCH_DATA_CORRECT = 'NO_SEARCH_DATA_CORRECT';
 export const noSearchDataCorrect = () => ({
   type: NO_SEARCH_DATA_CORRECT,
