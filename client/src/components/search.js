@@ -31,7 +31,7 @@ import {searchRequest, soundCloudIcon, noSearchData} from '../actions/action';
     render() {
       let noSearchData;
       if (this.props.noSearchData === true) {
-         noSearchData= <h5 className='no-search-data'>Country does not exist, please try another</h5>;
+         noSearchData= <h5 className='no-search-data'>We will add this Country shortly, please click on All Vacations for all available countries</h5>;
       }
               return (
                 <div className='search-box' >

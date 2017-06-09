@@ -13,13 +13,7 @@ import {
 
 
 
- class Home extends React.Component {
-
-    // constructor(props) {
-    //     super(props);
-
-
-
+class Home extends React.Component {
 
     render() {
       let loginPage;
@@ -40,7 +34,7 @@ import {
         headings=<Headings/>
       }
       let sound;
-      if (this.props.soundShowing === true ) {
+      if (this.props.soundShowing === true) {
         sound=<Sound/>
       }
       let vacationsModal;

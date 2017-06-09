@@ -115,7 +115,7 @@ export default (state = initialState, action) => {
            })
            case SHOW_VACATIONS_MODAL:
            return Object.assign({},state,{
-             vacationsModal: true
+             vacationsModal: !state.vacationsModal
            })
            case NO_SEARCH_DATA_CORRECT:
            return Object.assign({},state,{
